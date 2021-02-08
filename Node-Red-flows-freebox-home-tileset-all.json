@@ -1,0 +1,124 @@
+[
+    {
+        "id": "e631091c.84ac48",
+        "type": "tab",
+        "label": "Freebox",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3bb12669.eb2bca",
+        "type": "inject",
+        "z": "e631091c.84ac48",
+        "name": "/home/tileset/all",
+        "props": [
+            {
+                "p": "url",
+                "v": "/home/tileset/all",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "9b72aebb.b3cdc"
+            ]
+        ]
+    },
+    {
+        "id": "9b72aebb.b3cdc",
+        "type": "api",
+        "z": "e631091c.84ac48",
+        "name": "API Node",
+        "server": "9ff429ec.8663e8",
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "d2f91d6b.dbfee"
+            ]
+        ]
+    },
+    {
+        "id": "2e738bf8.b524e4",
+        "type": "debug",
+        "z": "e631091c.84ac48",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d2f91d6b.dbfee",
+        "type": "json",
+        "z": "e631091c.84ac48",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "2e738bf8.b524e4",
+                "3788740d.a0188c"
+            ]
+        ]
+    },
+    {
+        "id": "3788740d.a0188c",
+        "type": "mqtt out",
+        "z": "e631091c.84ac48",
+        "name": "freebox_home_tileset_all",
+        "topic": "node_red/freebox_home_tileset_all",
+        "qos": "",
+        "retain": "true",
+        "broker": "37947fb8.1a801",
+        "x": 690,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9ff429ec.8663e8",
+        "type": "freebox-server",
+        "host": "https://192.168.10.254",
+        "port": "443"
+    },
+    {
+        "id": "37947fb8.1a801",
+        "type": "mqtt-broker",
+        "name": "%%MQTT-BROKER-NAME",
+        "broker": "%%MQTT-HOST-OR-IP-MAYBE-LOCALHOST",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    }
+]
