@@ -20,7 +20,8 @@
     
     
   - platform: mqtt
-    name: "Porte d'entrée"
+    name: "Détecteur d'ouverture"
+    unique_id: "sensor.detecteur_ouverture"
     icon: 'mdi:door-open'
     state_topic: "node_red/freebox_home_tileset_all"
     payload_available: "online"
@@ -40,7 +41,8 @@
 
 
   - platform: mqtt
-    name: "Détecteur Salon"
+    name: "Détecteur de mouvement"
+    unique_id: "sensor.detecteur_mouvement"
     icon: 'mdi:motion-sensor'
     state_topic: "node_red/freebox_home_tileset_all"
     payload_available: "online"
