@@ -1,0 +1,59 @@
+  
+  - platform: mqtt
+    name: "Alarme"
+    icon: 'mdi:alarm-light'
+    state_topic: "node_red/freebox_home_tileset_all"
+    value_template: >-
+        {% for x in value_json %}
+        {% if  x.type == "alarm_control"  %}
+        {% if x.data[0].value == 'idle' %}
+        Désactivée
+        {% elif x.data[0].value == 'alarm1_arming' %}
+        Alarme 1 activée
+        {% elif x.data[0].value == 'alarm2_arming' %}
+        Alarme 2 activée
+        {% else %}
+        Inconnu
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    
+    
+  - platform: mqtt
+    name: "Porte d'entrée"
+    icon: 'mdi:door-open'
+    state_topic: "node_red/freebox_home_tileset_all"
+    payload_available: "online"
+    payload_not_available: "offline"
+    value_template: >-
+        {% for x in value_json %}
+        {% if  x.type == "alarm_sensor" and x.icon_url == "/resources/images/home/pictos/detecteur_ouverture.png" %}
+        {% if x.data[0].value == True %}
+        Fermée
+        {% elif x.data[0].value == False %}
+        Ouverte
+        {% else %}
+        Inconnu
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+
+  - platform: mqtt
+    name: "Détecteur Salon"
+    icon: 'mdi:motion-sensor'
+    state_topic: "node_red/freebox_home_tileset_all"
+    payload_available: "online"
+    payload_not_available: "offline"
+    value_template: >-
+        {% for x in value_json %}
+        {% if  x.type == "alarm_sensor" and x.icon_url == "/resources/images/home/pictos/detecteur_mouvement.png" %}
+        {% if x.data[0].value == True %}
+        Aucun mouvement
+        {% elif x.data[0].value == False %}
+        Mouvement détecté
+        {% else %}
+        Inconnu
+        {% endif %}
+        {% endif %}
+        {% endfor %}
