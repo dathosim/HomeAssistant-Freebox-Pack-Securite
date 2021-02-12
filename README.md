@@ -14,17 +14,26 @@ Pour cela, aller dans l'onglet configuration de Node-Red
 Ensuite démarrer NodeRed  
 Et vous aurez accès à l'interface Node-Red (que vous pourrez mettre dans le menu de gauche de HA)
 
-### 2. Installation du package node-red-contrib-freebox
+### 1.2 Installation du package node-red-contrib-freebox
 
 Ce package va vous permettre de vous connecter à l'API de la Freebox sur Node Red  
 Pour l'installer, rendez-vous dans "Manage Palette" de l'interface de Node Red (menu burger en haut à droite)  
-Puis dans l'onglet "install"  
-Et chercher le mot "freebox".  
+Puis dans l'onglet "install"  pour chercher le mot "freebox".  
 Vous allez trouver le package "node-red-contrib-freebox" : cliquez sur "install"  
-Une fois le package installé, vous devriez trouver 3 nouveaux noeuds dans la library de noeud sous un groupe Freebox(volet de gauche de Node-Red
+Une fois le package installé, vous devriez trouver 3 nouveaux noeuds dans la library de noeud sous un groupe Freebox(volet de gauche de Node-Red : 
 - Connection
 - API 
 - Lan Browser
+
+### 1.3 Parametrage du flow NodeRed
+
+Pour cette étape vous pouvez importer le fichier de [flow](./Node-Red-flows-freebox-home-tileset-all.json) que j'ai mis à disposition dans ce projet
+
+### 1.4 Exécution et controle du flow Node-Red
+
+A cette étape vous devriez avoir quelque chose qui ressemble à cela 
+Pour lancer le flow Node Red manuellement vous pouvez cliquez sur le bouton bleu du noeud bleu à gauche 
+
 
 
 
