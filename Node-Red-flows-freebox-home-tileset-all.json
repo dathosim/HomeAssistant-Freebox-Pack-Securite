@@ -18,7 +18,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "5",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
