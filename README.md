@@ -47,6 +47,8 @@ En cliquant sur le noeud API Freebox (gris), on peut paramétrer ou vérifier le
 
 A cette étape vous devriez avoir quelque chose qui ressemble à cela :
 
+![Alt text](NodeRed-Flow-API-Freebox.png?raw=true "Screen Shot Node Red")
+
 
 Il faut commencer par paramétrer le noeud API en indiquant le serveur 
 Pour lancer le flow Node Red manuellement vous pouvez cliquez sur le bouton bleu du noeud bleu à gauche.
