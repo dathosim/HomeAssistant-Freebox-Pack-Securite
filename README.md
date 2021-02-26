@@ -57,14 +57,14 @@ On peut lancer le flow en cliquant sur le bouton à gauche du noeud le plus à g
 Cela devrait déclencher un message pour "accepter l'application" sur l'écran de votre Freebox Delta.  
 Il faut donc aller devant votre boitier server et faire accepter.  
 
-Mais cela ne suffit pas car par défaut l'application n'a pas les droits via l'API sur les éléments du pack sécurité.
+Mais cela ne suffit pas car par défaut l'application n'a pas les droits via l'API sur les éléments du pack sécurité.  
 Il faut aller dans le paramétrage de la Freebox : http://mafreebox.freebox.fr.  
 Ensuite dans "Paramètre de la Freebox".  
 Et ensuite dans l'onglet Application, vous devriez voir une nouvelle application en fin de liste nommée "node-red Freebox API"
 Cette application doit avoir les droits (case cochée) sur "Gestion de l'alarme et maison connectée".  
 
 Quand tout ceci est fait vous pouvez relancer une exécution du flow Node Red (bouton à gauche du noeud Input).  
-Et la vous devriez voir un voyant vert sur noeud "API Node" et sous le noeud MQTT à droite.  
+Et la vous devriez voir un voyant vert sous le noeud "API Node" et sous le noeud MQTT à droite.  
 Activer le bouton vert à droite du noeud debug (vert), relancer une exécution de flow et vous devriez voir un retour d'API dans le volet debug de Node Red.  
 
 
