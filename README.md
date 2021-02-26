@@ -47,7 +47,7 @@ En cliquant sur le noeud API Freebox (gris-bleu), on peut paramétrer ou vérifi
 N'oubliez pas de faire un "Deploy" (bouton rouge en haut à droite). 
 
 
-### 1.4 Exécution et controle du flow Node-Red
+### 2.4 Exécution et controle du flow Node-Red
 
 A cette étape vous devriez avoir quelque chose qui ressemble à cela :
 
@@ -62,6 +62,10 @@ Il faut aller dans le paramétrage de la Freebox : http://mafreebox.freebox.fr.
 Ensuite dans "Paramètre de la Freebox".  
 Et ensuite dans l'onglet Application, vous devriez voir une nouvelle application en fin de liste nommée "node-red Freebox API"
 Cette application doit avoir les droits (case cochée) sur "Gestion de l'alarme et maison connectée".  
+cf. image ci-dessous 
+
+![Alt text](/img/Freebox-GestionAcces-Ajoutacces.png?raw=true "Ajout accès sur FreeboxOS")
+
 
 Quand tout ceci est fait vous pouvez relancer une exécution du flow Node Red (bouton à gauche du noeud Input).  
 Et la vous devriez voir un voyant vert sous le noeud "API Node" et sous le noeud MQTT à droite.  
