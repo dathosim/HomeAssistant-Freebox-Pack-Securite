@@ -59,7 +59,7 @@ En cliquant sur le noeud API Freebox (gris-bleu), on peut paramétrer ou vérifi
 N'oubliez pas de faire un "Deploy" (bouton rouge en haut à droite). 
 
 
-### 2.4 Première éxécution du flow NodeRed et paramétrage des accès sur FreeboxOS
+### 2.4 Première éxécution du flow NodeRed 
 
 A cette étape vous devriez avoir quelque chose qui ressemble à cela :
 
@@ -68,6 +68,8 @@ A cette étape vous devriez avoir quelque chose qui ressemble à cela :
 On peut lancer le flow en cliquant sur le bouton à gauche du noeud le plus à gauche.  
 Cela devrait déclencher un message pour "accepter l'application" sur l'écran de votre Freebox Delta.  
 Il faut donc aller devant votre boitier server et faire accepter.  
+
+### 2.5 Paramétrage des accès sur FreeboxOS
 
 Mais cela ne suffit pas car par défaut l'application n'a pas les droits via l'API sur les éléments du pack sécurité.  
 Il faut aller dans le paramétrage de la Freebox : http://mafreebox.freebox.fr.  
@@ -78,7 +80,7 @@ cf. image ci-dessous
 
 ![Ajout accès sur FreeboxOS](/img/Freebox-GestionAcces-Ajoutacces.png?raw=true "Ajout accès sur FreeboxOS")
 
-### 2.5 Vérification du flow Node-Red (debug)
+### 2.6 Vérification du flow Node-Red (debug)
 
 Quand tout ceci est fait vous pouvez relancer une exécution du flow Node Red (bouton à gauche du noeud Input).  
 Et la vous devriez voir un voyant vert sous le noeud "API Node" et sous le noeud MQTT à droite.  
@@ -89,7 +91,7 @@ cf. copie écran
 
 .... si vous en êtes la vous avez fait le plus dur...
 
-### 2.6 Ajout d'un appel récurent à l'API dans le flow - important !
+### 2.7 Ajout d'un appel récurent à l'API dans le flow - important !
 
 Il s'agit maitenant que l'appel à l'API soit automatique (plus besoin de lancer le flow à la main) et régulier pour récupérer le plus rapidement possible un changement d'état des sensors.  
 Il suffit pour cela de configurer le noeud "input" de gauche et d'ajouter une récurence en paramétrant :  
