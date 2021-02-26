@@ -47,7 +47,7 @@ En cliquant sur le noeud API Freebox (gris-bleu), on peut paramétrer ou vérifi
 N'oubliez pas de faire un "Deploy" (bouton rouge en haut à droite). 
 
 
-### 2.4 Exécution et controle du flow Node-Red
+### 2.4 Première éxécution du flow NodeRed et paramétrage des accès sur FreeboxOS
 
 A cette étape vous devriez avoir quelque chose qui ressemble à cela :
 
@@ -64,16 +64,26 @@ Et ensuite dans l'onglet Application, vous devriez voir une nouvelle application
 Cette application doit avoir les droits (case cochée) sur "Gestion de l'alarme et maison connectée".  
 cf. image ci-dessous 
 
-![Alt text](/img/Freebox-GestionAcces-Ajoutacces.png?raw=true "Ajout accès sur FreeboxOS")
+![Ajout accès sur FreeboxOS](/img/Freebox-GestionAcces-Ajoutacces.png?raw=true "Ajout accès sur FreeboxOS")
 
+### 2.5 Vérification du flow Node-Red (debug)
 
 Quand tout ceci est fait vous pouvez relancer une exécution du flow Node Red (bouton à gauche du noeud Input).  
 Et la vous devriez voir un voyant vert sous le noeud "API Node" et sous le noeud MQTT à droite.  
-Activer le bouton vert à droite du noeud debug (vert), relancer une exécution de flow et vous devriez voir un retour d'API dans le volet debug de Node Red.  
+Activer le bout on vert à droite dunoeud debug (vert), relancer une exécution de flow et vous devriez voir un retour d'API dans le volet debug de Node Red.  
+cf. copie écran
 
-![Alt text](/img/NodeRed-Flow-API-Freebox-debug-success.png?raw=true "Flow NodeRed avec debug success")
+![Flow NodeRed avec debug en sucess](/img/NodeRed-Flow-API-Freebox-debug-success.png?raw=true "Flow NodeRed avec debug success")
 
 .... si vous en êtes la vous avez fait le plus dur...
+
+## 3. Ajout des entités dans Home Assistant 
+
+Pour cela il suffit de copier le contenu du fichier de configuration fourni dans votre fichier configuration.yaml de Home Assistant
+[Configuration à copier](./configuration.yaml?raw=true)  
+
+Ensuite relancer HA et ajouter les nouvelles entités au dashboard
+
 
 
 
