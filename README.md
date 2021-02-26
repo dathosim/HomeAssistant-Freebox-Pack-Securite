@@ -3,14 +3,14 @@ Configuration Home assistant pour Pack Sécurité de la Freebox Delta
 
 ![Alt text](ScreenShot-Freebox-Delta-pack-securite-HomeAssistant.png?raw=true "Screen Shot")
 
-. [Pré-requis](#pre-requis)
-. [Etape d'installation et paramétrage ](#paragraph1)
-    1. [Broker MQTT](#subparagraph1)
-    2. [Node-Red](#subparagraph1)
-    3. [Ajout des entités dans Home Assistant](#subparagraph1)
+. [Pré-requis](#pré-requis)  
+. [Etape d'installation et paramétrage ](#etape-dinstallation-et-paramétrage)  
+    1. [Broker MQTT](#1-broker-mqtt)  
+    2. [Node-Red](#2-node-red)  
+    3. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
 
 
-# Pré-requis : 
+# Pré-requis
 - Une freebox Delta et le pack sécurité installé (Détecteur de mouvement, détecteur d'ouverture de porte et alarme)
 - Un broker MQTT accessible via Home Assistant  
 Conseil : installer l'Addon Mosquito Breoker de Home Assistant
