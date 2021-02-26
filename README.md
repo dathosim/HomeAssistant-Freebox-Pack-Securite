@@ -5,16 +5,16 @@ Configuration Home assistant pour Pack Sécurité de la Freebox Delta
 
 # Pré-requis : 
 - Une freebox Delta et le pack sécurité installé (Détecteur de mouvement, détecteur d'ouverture de porte et alarme)
-- Un broker MQQT installé et accessible via Home Assistant  
+- Un broker MQTT accessible via Home Assistant  
 Conseil : installer l'Addon Mosquito Breoker de Home Assistant
-- Node-Red installé et accessible par HA (installation et paramétrage détaillé dans cette documentation)  
+- Node-Red accessible par HA (installation et paramétrage détaillé dans cette documentation)  
 
 # Etape d'installation et paramétrage 
 
 ## 1. Broker MQTT
 
 Cette intégration a été testée avec l'Addon "Mosquito MQTT Broker"  
-Mais cela doit pouvoir fonctionner avec tout autre broker accessible depuis HA
+Mais cela doit pouvoir fonctionner avec tout autre broker accessible depuis HA.  
 (Rappel : Supervisor, puis Add-on Store, sélectionner "Mosquito Broker" et "Installer") 
 
 
@@ -22,7 +22,7 @@ Mais cela doit pouvoir fonctionner avec tout autre broker accessible depuis HA
 ### 2.1 Installation de l'addon Node Red
 Il faut commencer par installer l'Add-on Node-Red de Home Assistant  
 (Rappel : Supervisor, puis Add-on Store, sélectionner Node-Red et "Installer")  
-Ne pas oublier d'ajouter un "secret_creential" dans la configuration avant de lancer NodeRed
+Ne pas oublier d'ajouter un "secret_credential" dans la configuration avant de lancer NodeRed. 
 Ensuite, on accède à l'UI de Node Red 
 
 ### 2.2 Installation du package node-red-contrib-freebox
@@ -36,7 +36,9 @@ Une fois le package installé, vous devriez trouver 3 nouveaux noeuds dans la li
 - API 
 - Lan Browser
 
-### 2.3 Parametrage du flow NodeRed
+### 2.3 Création et parametrage du flow NodeRed pour MQTT
+
+Il s'agit de créer un flow NodeRed qui va récupérer les valeurs des sensors (Alarme, porte et mouvement) de votre pack sécurité et les transmettre au broker MQTT.  
 
 Pour cette étape vous pouvez importer le fichier de [flow](./Node-Red-flows-freebox-home-tileset-all.json) mis à disposition dans ce projet.  
 (Import dans le menu Node Red noir en haut à droite).
