@@ -71,6 +71,7 @@ Quand tout ceci est fait vous pouvez relancer une exécution du flow Node Red (b
 Et la vous devriez voir un voyant vert sous le noeud "API Node" et sous le noeud MQTT à droite.  
 Activer le bouton vert à droite du noeud debug (vert), relancer une exécution de flow et vous devriez voir un retour d'API dans le volet debug de Node Red.  
 
+![Alt text](/img/NodeRed-Flow-API-Freebox-debug-success.png?raw=true "Flow NodeRed avec debug success")
 
 .... si vous en êtes la vous avez fait le plus dur...
 
