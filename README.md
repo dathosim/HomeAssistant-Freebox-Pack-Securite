@@ -89,9 +89,15 @@ cf. copie écran
 
 .... si vous en êtes la vous avez fait le plus dur...
 
+### 2.6 Ajout d'un appel récurent à l'API dans le flow - important !
+
+Il s'agit maitenant que l'appel à l'API soit automatique (plus besoin de lancer le flow à la main) et régulier pour récupérer le plus rapidement possible un changement d'état des sensors.  
+Il suffit pour cela de configurer le noeud "input" de gauche et d'ajouter une récurence en paramétrant :  
+Repeat / interval / every 5 secondes
+
 ## 3. Ajout des entités dans Home Assistant 
 
-Pour cela il suffit de copier le contenu du fichier de configuration fourni dans votre fichier configuration.yaml de Home Assistant
+Pour cela il suffit de copier le contenu du fichier de configuration fourni dans ce projet dans votre fichier configuration.yaml de Home Assistant
 [Configuration à copier](./configuration.yaml?raw=true)  
 
 Ensuite relancer HA et ajouter les nouvelles entités au dashboard
