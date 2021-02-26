@@ -3,11 +3,10 @@ Configuration Home assistant pour Pack Sécurité de la Freebox Delta
 
 ![Alt text](ScreenShot-Freebox-Delta-pack-securite-HomeAssistant.png?raw=true "Screen Shot")
 
-. [Pré-requis](#pré-requis)  
-. [Etape d'installation et paramétrage ](#etape-dinstallation-et-paramétrage)  
-    1. [Broker MQTT](#1-broker-mqtt)  
-    2. [Node-Red](#2-node-red)  
-    3. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
+
+1. [Broker MQTT](#1-broker-mqtt)  
+2. [Node-Red](#2-node-red)  
+2. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
 
 
 # Pré-requis
@@ -17,6 +16,10 @@ Conseil : installer l'Addon Mosquito Breoker de Home Assistant
 - Node-Red accessible par HA (installation et paramétrage détaillé dans cette documentation)  
 
 # Etape d'installation et paramétrage 
+
+1. [Broker MQTT](#1-broker-mqtt)  
+2. [Node-Red](#2-node-red)  
+2. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
 
 ## 1. Broker MQTT
 
