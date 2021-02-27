@@ -18,8 +18,8 @@ Conseil : installer l'Add-on Mosquito Broker de Home Assistant
 # Etape d'installation et paramétrage 
 
 1. [Broker MQTT](#1-broker-mqtt)  
-2. [Node-RED](#2-node-red)  
-2. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
+2. [Node-RED](#2-node-red)
+4. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
 
 ## 1. Broker MQTT
 
@@ -29,7 +29,7 @@ Mais cela doit pouvoir fonctionner avec tout autre broker accessible depuis HA.
 
 
 ## 2. Node-RED
-### 2.1 Installation de l'addon Node-RED
+### 2.1 Installation de l'Add-on Node-RED
 Il faut commencer par installer l'Add-on Node-RED de Home Assistant  
 (Rappel : Supervisor, puis Add-on Store, sélectionner Node-RED et "Installer")  
 Ne pas oublier d'ajouter un "secret_credential" dans la configuration avant de lancer Node-RED. 
