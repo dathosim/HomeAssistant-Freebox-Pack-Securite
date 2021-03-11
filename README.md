@@ -53,7 +53,10 @@ Il s'agit de créer un flow Node-RED qui va récupérer les valeurs des sensors 
 Pour cette étape vous pouvez importer le fichier de [flow](./Node-Red-flows-freebox-home-tileset-all.json) mis à disposition dans ce projet.  
 (Import dans le menu Node-RED noir en haut à droite).
 
-En cliquant sur le noeud MQTT (rose), on peut paramétrer le serveur MQTT installé à l'étape 1 (indiquer l'IP local et le port de votre broker MQTT).  
+En cliquant sur le noeud MQTT (rose), on peut paramétrer le serveur MQTT installé à l'étape 1.  
+Détails : Renseigner l'IP locale (192.168.x.x), le port de votre broker MQTT (1883 si pas de SSL) et pour le user/password indiquez un utlisateur valide de HA.  
+Conseil : Créer dans HA un user spécifique qui sera utliser que pour la connexion au MQTT.
+
 En cliquant sur le noeud API Freebox (gris-bleu), on peut paramétrer ou vérifier le paramétrage du serveur Freebox (mafreebox.freebox.fr port 443). 
 
 N'oubliez pas de faire un "Deploy" (bouton rouge en haut à droite). 
