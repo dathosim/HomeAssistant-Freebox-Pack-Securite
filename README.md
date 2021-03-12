@@ -55,7 +55,7 @@ Pour cette étape vous pouvez importer le fichier de [flow](./Node-Red-flows-fre
 
 En cliquant sur le noeud MQTT (rose), on peut paramétrer le serveur MQTT installé à l'étape 1.  
 Détails : Renseigner l'IP locale (192.168.x.x), le port de votre broker MQTT (1883 si pas de SSL) et pour le user/password indiquez un utlisateur valide de HA.  
-Conseil : Créer dans HA un user spécifique qui sera utliser que pour la connexion au MQTT.
+Conseil : Créer dans HA un user spécifique qui sera utilisé que pour la connexion au MQTT.
 
 En cliquant sur le noeud API Freebox (gris-bleu), on peut paramétrer ou vérifier le paramétrage du serveur Freebox (mafreebox.freebox.fr port 443). 
 
