@@ -104,8 +104,8 @@ Repeat > interval > every 5 secondes
 
 Pour cela il suffit de copier le contenu du fichier de configuration des sensor fourni dans ce projet dans votre fichier configuration.yaml de Home Assistant
 [Configuration à copier](./configuration.yaml?raw=true).  
-Attention : cette partie de configuration est à placé dans la partie "sensor: " de votre configuration.  
-Si vous n'avez pas encore de sensor dans votre fichier ajouter simplement une ligne "sensor:" avant de copier la configuration fournie.  
+Attention : cette partie de configuration est à placer dans la partie "sensor: " de votre configuration YAML.
+Si vous n'avez pas encore de sensor dans votre configuration, ajouter simplement une ligne "sensor:" avant de copier la configuration fournie.  
 
 Ensuite relancer HA et ajouter les nouvelles entités au dashboard
 Et vous devriez avoir quelque chose qui ressemble à cela :  
