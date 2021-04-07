@@ -1,4 +1,7 @@
+  mqtt:
+    broker: 192.168.XX.XX
   
+  sensor: 
   - platform: mqtt
     name: "Alarme"
     icon: 'mdi:alarm-light'
