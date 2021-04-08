@@ -11,21 +11,23 @@ Configuration Home assistant pour Pack Sécurité de la Freebox Delta
 
 # Pré-requis
 - Une freebox Delta et le pack sécurité installé (Alarme, détecteur de mouvement et détecteur d'ouverture de porte)
-- Un broker MQTT accessible via Home Assistant  
+- Un broker MQTT accessible via Home Assistant (et son intégration associée)
 Conseil : installer l'Add-on Mosquito Broker de Home Assistant
 - Node-Red accessible par HA (installation et paramétrage détaillé dans cette documentation)  
 
 # Etape d'installation et paramétrage 
 
-1. [Broker MQTT](#1-broker-mqtt)  
-2. [Node-RED](#2-node-red)
+1. [Broker MQTT et intégration MQTT](#1-broker-mqtt-et-intégration-mqtt)  
+2. [Node-RED](#2-node-red)  
 4. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
 
-## 1. Broker MQTT
+## 1. Broker MQTT et intégration MQTT
 
-Cette intégration a été testée avec l'Addon "Mosquito MQTT Broker"  
+Cette intégration a été testée avec l'Addon "Mosquito MQTT Broker" de Home Assistant.
 Mais cela doit pouvoir fonctionner avec tout autre broker accessible depuis HA.  
-(Rappel : Supervisor, puis Add-on Store, sélectionner "Mosquito Broker" et "Installer") 
+Rappel : Supervisor, puis Add-on Store, sélectionner "Mosquito Broker" et "Installer" 
+Attention : Lorsque vous avez installé le broker MQTT, n'oubliez pas de vous rendre dans "Configuration > Intégration".  
+HA va découvrir automatiquement une nouvelle intégration MQTT et vous proposera de la configurer pour votre broker.
 
 
 ## 2. Node-RED
