@@ -1,9 +1,7 @@
-  mqtt:
-    broker: 192.168.XX.XX
-  
-  sensor: 
+sensor: 
   - platform: mqtt
     name: "Alarme"
+    unique_id: "sensor.freebox_alarme"    
     icon: 'mdi:alarm-light'
     state_topic: "node_red/freebox_home_tileset_all"
     value_template: >-
@@ -24,7 +22,7 @@
     
   - platform: mqtt
     name: "Détecteur d'ouverture"
-    unique_id: "sensor.detecteur_ouverture"
+    unique_id: "sensor.freebox_detecteur_ouverture"
     icon: 'mdi:door-open'
     state_topic: "node_red/freebox_home_tileset_all"
     payload_available: "online"
@@ -45,7 +43,7 @@
 
   - platform: mqtt
     name: "Détecteur de mouvement"
-    unique_id: "sensor.detecteur_mouvement"
+    unique_id: "sensor.freebox_detecteur_mouvement"
     icon: 'mdi:motion-sensor'
     state_topic: "node_red/freebox_home_tileset_all"
     payload_available: "online"
