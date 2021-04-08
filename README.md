@@ -4,11 +4,6 @@ Configuration Home assistant pour Pack Sécurité de la Freebox Delta
 ![Alt text](ScreenShot-Freebox-Delta-pack-securite-HomeAssistant.png?raw=true "Screen Shot")
 
 
-1. [Broker MQTT](#1-broker-mqtt)  
-2. [Node-RED](#2-node-red)  
-2. [Ajout des entités dans Home Assistant](#3-ajout-des-entités-dans-home-assistant)  
-
-
 # Pré-requis
 - Une freebox Delta et le pack sécurité installé (Alarme, détecteur de mouvement et détecteur d'ouverture de porte)
 - Un broker MQTT accessible via Home Assistant (et son intégration associée)
