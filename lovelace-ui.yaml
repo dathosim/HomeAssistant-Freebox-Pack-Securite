@@ -1,0 +1,68 @@
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: sensor.alarme
+            icon: 'mdi:alarm-light'
+            show_state: true
+            name: Alarme
+            state:
+              - value: Inconnu
+                color: var(--disabled-text-color)
+              - value: Désactivée
+                color: var(--disabled-text-color)
+              - value: Principale en cours
+                color: 'rgb(252, 43, 47)'
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+              - value: Secondaire en cours
+                color: 'rgb(253, 128, 8)'
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+              - value: Principale activée
+                color: 'rgb(252, 43, 47)'
+              - value: Secondaire activée
+                color: 'rgb(253, 128, 8)'
+            styles:
+              card:
+                - background-color: '#EEEEEE'
+                - font-size: 14px
+          - type: 'custom:button-card'
+            entity: sensor.detecteur_d_ouverture
+            icon: 'mdi:door'
+            show_state: true
+            name: Porte d'entrée
+            state:
+              - value: Fermée
+                color: 'rgb(100, 197, 95)'
+                icon: 'mdi:door'
+              - value: Ouverte
+                color: 'rgb(252, 43, 47)'
+                icon: 'mdi:door-open'
+            styles:
+              card:
+                - background-color: '#EEEEEE'
+                - font-size: 14px
+          - type: 'custom:button-card'
+            entity: sensor.detecteur_de_mouvement
+            icon: 'mdi:motion-sensor'
+            name: Mouvement
+            show_state: true
+            state:
+              - value: Détecté
+                color: 'rgb(252, 43, 47)'
+                icon: 'mdi:motion-sensor'
+                show_state: true
+              - value: Aucun
+                color: 'rgb(100, 197, 95)'
+              - value: Inconnu
+                color: var(--disabled-text-color)
+                icon: 'mdi:motion-sensor-off'
+              - value: ''
+                color: var(--disabled-text-color)
+                icon: 'mdi:motion-sensor-off'
+            styles:
+              card:
+                - background-color: '#EEEEEE'
+                - font-size: 14px
