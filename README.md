@@ -104,10 +104,14 @@ Pour cela il suffit de copier le contenu du fichier de configuration des sensor 
 Attention : cette partie de configuration est à placer dans la partie "sensor: " de votre configuration YAML.
 Si vous n'avez pas encore de sensor dans votre configuration, ajouter simplement une ligne "sensor:" avant de copier la configuration fournie.  
 
-Ensuite relancer HA et ajouter les nouvelles entités au dashboard
-Et vous devriez avoir quelque chose qui ressemble à cela :  
+Ensuite relancer HA et ajouter les nouvelles entités au dashboard.  
+Et vous devriez avoir quelque chose qui ressemble à cela (en créant via l'interface) :  
 
 ![Screen Shot intégration Freebox Pack Sécurité](ScreenShot-Freebox-Delta-pack-securite-HomeAssistant.png?raw=true "Screen Shot")
+
+Ou avec la carte personnalisée button-card https://github.com/custom-cards/button-card :
+![Screen Shot intégration Freebox Pack Sécurité avec la carte button-card](ScreenShot-Freebox-Delta-pack-securite-HomeAssistant-custom.png?raw=true "Screen Shot Custom")
+
 
 
 
