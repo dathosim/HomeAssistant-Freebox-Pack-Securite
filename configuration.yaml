@@ -9,10 +9,14 @@ sensor:
         {% if  x.type == "alarm_control"  %}
         {% if x.data[0].value == 'idle' %}
         Désactivée
+        {% elif x.data[0].value == 'alarm1_armed' %}
+        Alarme principale activée
         {% elif x.data[0].value == 'alarm1_arming' %}
-        Alarme 1 activée
+        Alarme principale en cours d'activation
+        {% elif x.data[0].value == 'alarm2_armed' %}
+        Alarme secondaire activée
         {% elif x.data[0].value == 'alarm2_arming' %}
-        Alarme 2 activée
+        Alarme secondaire en cours d'activation
         {% else %}
         Inconnu
         {% endif %}
