@@ -43,7 +43,38 @@ sensor:
         {% endif %}
         {% endif %}
         {% endfor %}
-
+  - platform: mqtt
+    name: "Détecteur d'ouverture Couvercle"
+    unique_id: "sensor.freebox_detecteur_ouverture_couvercle"
+    icon: 'mdi:valve-open'
+    state_topic: "node_red/freebox_home_tileset_all"
+    payload_available: "online"
+    payload_not_available: "offline"
+    value_template: >-
+        {% for x in value_json %}
+        {% if  x.type == "alarm_sensor" and x.label == "Détecteur d'ouverture" and x.icon_url == "/resources/images/home/pictos/detecteur_ouverture.png" %}
+        {% if x.data[1].value == False %}
+        Couvercle fermé
+        {% elif x.data[1].value == True %}
+        Couvercle ouvert
+        {% else %}
+        Inconnu
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+  - platform: mqtt
+    name: "Détecteur d'ouverture Batterie"
+    unique_id: "sensor.freebox_detecteur_ouverture_batterie"
+    icon: 'mdi:battery'
+    state_topic: "node_red/freebox_home_tileset_all"
+    payload_available: "online"
+    payload_not_available: "offline"
+    value_template: >-
+        {% for x in value_json %}
+        {% if  x.type == "alarm_sensor" and x.label == "Détecteur d'ouverture" and x.icon_url == "/resources/images/home/pictos/detecteur_ouverture.png" %}
+        {{ x.data[2].value }}%
+        {% endif %}
+        {% endfor %}
 
   - platform: mqtt
     name: "Détecteur de mouvement"
@@ -54,13 +85,49 @@ sensor:
     payload_not_available: "offline"
     value_template: >-
         {% for x in value_json %}
-        {% if  x.type == "alarm_sensor" and x.icon_url == "/resources/images/home/pictos/detecteur_mouvement.png" %}
+        {% if  x.type == "alarm_sensor" and x.label == "Détecteur de mouvement" and x.icon_url == "/resources/images/home/pictos/detecteur_mouvement.png" %}
         {% if x.data[0].value == True %}
         Aucun mouvement
         {% elif x.data[0].value == False %}
         Mouvement détecté
         {% else %}
         Inconnu
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+  - platform: mqtt
+    name: "Détecteur de mouvement Couvercle"
+    unique_id: "sensor.freebox_detecteur_mouvement_couvercle"
+    icon: 'mdi:valve-open'
+    state_topic: "node_red/freebox_home_tileset_all"
+    payload_available: "online"
+    payload_not_available: "offline"
+    value_template: >-
+        {% for x in value_json %}
+        {% if  x.type == "alarm_sensor" and x.label == "Détecteur de mouvement" and x.icon_url == "/resources/images/home/pictos/detecteur_mouvement.png" %}
+        {% if x.data[1].value == False %}
+        Couvercle fermé
+        {% elif x.data[1].value == True %}
+        Couvercle ouvert
+        {% else %}
+        Inconnu
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+  - platform: mqtt
+    name: "Détecteur de mouvement Batterie"
+    unique_id: "sensor.freebox_detecteur_mouvement_batterie"
+    icon: 'mdi:battery'
+    state_topic: "node_red/freebox_home_tileset_all"
+    payload_available: "online"
+    payload_not_available: "offline"
+    value_template: >-
+        {% for x in value_json %}
+        {% if  x.type == "alarm_sensor" and x.label == "Détecteur de mouvement" and x.icon_url == "/resources/images/home/pictos/detecteur_mouvement.png" %}
+        {% if x.data[2].value == None %}
+        100%
+        {% else %}
+        {{ x.data[2].value }}%
         {% endif %}
         {% endif %}
         {% endfor %}
